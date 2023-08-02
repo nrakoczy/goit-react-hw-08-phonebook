@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <>
       <AppBar />
-      <MUI.Container sx={{ marginTop: '120px' }}>
+      <MUI.Container sx={{ marginTop: '140px' }}>
         <Suspense fallback={<h1>Loading...</h1>}>
           <Outlet />
         </Suspense>
