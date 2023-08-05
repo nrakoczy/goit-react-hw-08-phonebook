@@ -1,12 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
-
+import RestrictedRoute from 'components/RestrictedRoute';
+import PrivateRoute from 'components/PrivateRoute';
 import Layout from 'components/Layout/Layout';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCurrentUser } from 'redux/auth/authOperations';
-import RestrictedRoute from 'components/RestrictedRoute';
-import PrivateRoute from 'components/PrivateRoute';
 
 import useAuth from 'hooks/useAuth';
 const Home = lazy(() => import('pages/Home'));

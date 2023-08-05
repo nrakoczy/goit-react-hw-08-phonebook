@@ -13,7 +13,7 @@ export default function UserMenu() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          gap: '2rem',
+          gap: '20px',
           alignItems: 'center',
         }}
       >

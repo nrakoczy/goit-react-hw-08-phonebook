@@ -11,7 +11,6 @@ const unsetToken = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
@@ -24,7 +23,6 @@ export const register = createAsyncThunk(
     }
   }
 );
-
 
 export const logIn = createAsyncThunk(
   'auth/login',
@@ -48,6 +46,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
 
 export const fetchCurrentUser = createAsyncThunk(
   'auth/refresh',

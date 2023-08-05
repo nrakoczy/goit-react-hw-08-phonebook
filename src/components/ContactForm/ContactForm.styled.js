@@ -16,15 +16,15 @@ export const Form = styled.form`
   }
 
   button {
-    padding: 2px 5px;
-    margin-left: 10px;
-    background-color: #0c0;
+    padding: 5px 8px;
+    background-color: #66b3ee;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    margin-left: 15px;
 
     :hover {
-      background-color: #0f0;
+      background-color: #7f8aee;
       color: #f9f;
     }
     :active {
