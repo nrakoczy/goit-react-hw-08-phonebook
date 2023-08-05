@@ -7,6 +7,7 @@ axios.defaults.baseURL = BASE_URL;
 const setToken = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
+
 const unsetToken = () => {
   axios.defaults.headers.common.Authorization = '';
 };
@@ -37,7 +38,6 @@ export const logIn = createAsyncThunk(
   }
 );
 
-
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
@@ -46,7 +46,6 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
 
 export const fetchCurrentUser = createAsyncThunk(
   'auth/refresh',
@@ -59,6 +58,7 @@ export const fetchCurrentUser = createAsyncThunk(
     }
 
     setToken(persistedToken);
+
     try {
       const { data } = await axios.get('/users/current');
       return data;
@@ -67,3 +67,6 @@ export const fetchCurrentUser = createAsyncThunk(
     }
   }
 );
+
+
+export { setToken, unsetToken };

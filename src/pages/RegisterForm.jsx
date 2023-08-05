@@ -82,7 +82,7 @@ export default function RegisterForm() {
         </label>
 
         <MUI.Button variant="contained" type="submit" color="success">
-          Refister
+          Register
         </MUI.Button>
       </form>
     </div>
